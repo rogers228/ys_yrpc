@@ -15,10 +15,11 @@ def main():
     # print('run_server')
     app_server_name = 'server_yrpc'
     port = 8245 # 預設80
+    nginx_https_port = 4439
     threads = 10 # 請求駐列數量
-
-    print(f'\n=========  {app_server_name} is running.  ===========')
-    print(f'\nhttp://220.168.100.186:{port}/')
+    PID = os.getpid()
+    print(f'\n=========  {app_server_name} is running. PID: {PID} ===========')
+    print(f'\nhttp://220.168.100.186:{port}/\nhttps://220.168.100.186:{nginx_https_port}/')
     print(f'\nfrom: {time.strftime("%Y-%m-%d %H:%M", time.localtime())}')
     print('\nCtrl + c to exit')
     print(f'\n=========         請勿關閉         ===========')
